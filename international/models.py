@@ -14,7 +14,7 @@ from django.utils.translation import ugettext as _
 
 
 babel = None
-print "WARNING, language names will not be available"
+print("WARNING, language names will not be available")
 
 __all__ = ['countries_raw', 'countries', 'currencies', 'languages',
            'languages_native', 'languages_english', 'Country']
@@ -502,7 +502,7 @@ class Country(models.Model):
     continent = models.CharField(_('continent'), max_length=2,
                                  choices=continents)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.get_code_display()
 
     class Meta:
